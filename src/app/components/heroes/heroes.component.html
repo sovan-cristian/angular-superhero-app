@@ -1,0 +1,97 @@
+<div class="container">
+  <!-- Unopen header elements -->
+    <div class="row mt-4">
+      <!-- Searchbox -->
+        <div class="col-4 offset-md-4">
+            <input placeholder="Search for a Superhero" id="typeahead-basic" type="text" class="form-control col-12 col-sm-4" [(ngModel)]="model" (input)="searchHeroes()"/>
+        </div>
+        <!-- Expand hero form button -->
+        <div class="col-4 ">
+            <p class="d-flex justify-content-end">
+                <button type="button" class="btn btn-dark " (click)="toggle()"
+                  aria-controls="collapseExample">
+                  Add New Hero
+                </button>
+              </p>
+        </div>
+        <!-- Opened hero form fields -->
+        <div [hidden]="isCollapsed">
+          <form #heroForm="ngForm">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Hero Real Name</label>
+                <input 
+                type="text" 
+                name="humanName"
+                class="form-control" 
+                id="hero-name" 
+                placeholder="Ex: Arthur Curry" 
+                required
+                [(ngModel)]="heroName"
+                >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Hero Superhero Alias</label>
+                <input 
+                type="text"
+                name="superName" 
+                class="form-control" 
+                id="hero-supername" 
+                placeholder="Ex: Aquaman"
+                required
+                [(ngModel)]="heroSuperName"
+                >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Image URL</label>
+                <input 
+                type="url" 
+                name="imgLink"
+                class="form-control" 
+                id="img-link" 
+                placeholder="Ex: google.com/images"
+                pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+                required
+                [(ngModel)]="heroImg"
+                #img = "ngModel"
+                >
+                <img [hidden]="!img.valid" src={{img.value}} style="height:400px; width: 400px; object-fit: cover;">
+              </div>
+              <div class="mb-3">
+                <form action="">
+                <select  
+                class="form-select" 
+                name="hero-powers" 
+                id="hero-powers" 
+                multiple 
+                [(ngModel)]="selectedPowers"
+                >
+                  <option value="{{power.id}}" *ngFor="let power of allSuperpowers" >{{ power.icon }} {{ power.name }}</option>
+                </select>
+                </form>
+                <!-- Form Buttons - First two depend on whether in editMode or not -->
+              <button *ngIf="editMode === 'add'" type="button" class="btn btn-dark my-3"  (click)="addHero()" [disabled]="!heroForm.valid">
+                Add
+              </button>
+              <button *ngIf="editMode === 'edit'" type="button" class="btn btn-dark my-3"  (click)="updateHero()" [disabled]="!heroForm.valid">
+                Edit
+              </button>
+              <button type="button" class="btn btn-dark my-3 mx-2" (click)="toggle()">
+                Cancel
+              </button>
+              <hr>
+              </div>
+            </form>
+          </div> 
+    </div>
+    <div class="row my-3">
+      <!-- Hero cards -->
+        <app-hero class="col-12 col-sm-4 my-3" 
+        *ngFor="let hero of heroes" 
+        [hero]="hero" 
+        (deletedHero)="updateView()"
+        (editHeroInfo)="updateFormFields(hero)"
+        ></app-hero>
+    </div>
+</div>
+
+

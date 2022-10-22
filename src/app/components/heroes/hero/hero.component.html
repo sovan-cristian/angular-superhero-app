@@ -1,0 +1,18 @@
+    <div class="card">
+        <img class="card-img-top img-fluid" style="height:400px; object-fit: cover;" src="{{ hero.imageUrl }}" alt="Card image cap">
+        <div class="card-body">
+          <h2 class="card-title">{{ hero.realName }}</h2>
+          <h6 class="card-text">{{ hero.superheroName }}</h6>
+        </div>
+        <ul class="list-group list-group-flush">
+            <app-superpowers [hero]="hero" (anotherEmitter)="keepGoing()"></app-superpowers>
+        </ul>
+        <div class="card-body">
+            <div class="row">
+                <button href="#" class="btn btn-outline-dark col-5 mx-2" (click)="editHero()">Edit</button>
+                <button href="#" class="btn btn-outline-dark col-5 mx-2" (click)="deleteHero(hero.id)">Delete</button>
+            </div>
+
+        </div>
+    </div>
+

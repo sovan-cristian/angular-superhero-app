@@ -1,0 +1,79 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "realName": "Bruce Wayne",
+      "superheroName": "Batman",
+      "imageUrl": "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+      "superpowerIds": [
+        1,
+        2,
+        3,
+        4,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "realName": "Clark Kent",
+      "superheroName": "Superman",
+      "imageUrl": "https://images.unsplash.com/photo-1634861949375-3fc4bd412f2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80",
+      "superpowerIds": [
+        2,
+        4,
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "realName": "Tony Stark",
+      "superheroName": "Iron Man",
+      "imageUrl": "https://images.unsplash.com/photo-1636840438199-9125cd03c3b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+      "superpowerIds": [
+        1,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "realName": "Wade Wilson",
+      "superheroName": "Deadpool",
+      "imageUrl": "https://images.unsplash.com/photo-1501432377862-3d0432b87a14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "superpowerIds": [
+        1,
+        2
+      ],
+      "id": 4
+    }
+  ],
+  "superpowers": [
+    {
+      "id": 1,
+      "name": "money",
+      "icon": "💸"
+    },
+    {
+      "id": 2,
+      "name": "intelligence",
+      "icon": "🤯"
+    },
+    {
+      "id": 3,
+      "name": "x-ray vision",
+      "icon": "🤩"
+    },
+    {
+      "id": 4,
+      "name": "flying",
+      "icon": "✈️"
+    },
+    {
+      "id": 5,
+      "name": "super strength",
+      "icon": "💪"
+    }
+  ]
+}
