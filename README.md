@@ -1,3 +1,24 @@
+First project in Angular framework - This project utilizes Angular, Bootstrap and JSON server. The concept of the app is similar to the tour of heroes project from Google's Angular page, but I created this app during my participation in the web development course from Scoala Informala de IT.
+
+
+The app makes a request to the JSON server and populates all the different superhero data in bootstrap cards:
+
+<img width="1331" alt="image" src="https://user-images.githubusercontent.com/109734593/211031613-0d765785-b719-43dd-90c6-e9618b86e40e.png">
+
+Each card can be edited, deleted and the superpowers associated with each superhero cand be deleted from here. Additionally, more can be added from the modal view:
+
+<img width="346" alt="image" src="https://user-images.githubusercontent.com/109734593/211032239-a73185f8-ba6c-48c7-8352-e00b9aa56730.png">
+
+Superpower modal:
+
+<img width="410" alt="image" src="https://user-images.githubusercontent.com/109734593/211032471-be8dfacb-3f6b-4b4f-9e8f-8a7964f9999c.png">
+
+New superheroes can be added to the list by filling in a form. When adding a link for the image, it will be dinamically loaded underneath the corresponding form input, as a preview:
+<img width="1096" alt="image" src="https://user-images.githubusercontent.com/109734593/211032958-64251451-f8e5-4432-a9b2-952312890ab8.png">
+
+
+
+
 <<<<<<< HEAD
 # superhero-app
 =======
